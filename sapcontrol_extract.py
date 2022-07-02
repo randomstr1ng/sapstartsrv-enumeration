@@ -56,6 +56,9 @@ print(f"[*] Target URL: {URL}")
 
 instances_list = get_instances(URL=URL)
 for instance in instances_list:
-    tmp_url = build_url(HOST=options.HOST,PORT=instance.httpPort,SSL=options.SSL)
+    if options.SSL:
+        tmp_url = build_url(HOST=options.HOST,PORT=instance.httpsPort,SSL=options.SSL)
+    else:
+        tmp_url = build_url(HOST=options.HOST,PORT=instance.httpPort,SSL=options.SSL)
     unprotected_methods = get_instance_unportected_methods(URL=tmp_url)
     print(f"[+] Unprotected Webmethods: {unprotected_methods}")
