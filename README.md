@@ -8,6 +8,7 @@ Install the following requirements:
 - suds-community
 - argparse
 - ssl
+- prettytable
 
 Example:
 ```bash
