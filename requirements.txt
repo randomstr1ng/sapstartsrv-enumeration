@@ -1,4 +1,3 @@
 suds-community
 argparse
-ssl
 prettytable
