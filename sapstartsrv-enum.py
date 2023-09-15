@@ -1,3 +1,6 @@
+"""
+Author: randomstr1ng
+"""
 #!/usr/bin/env python3
 
 from suds.client import Client
@@ -6,7 +9,7 @@ from prettytable import PrettyTable
 import ssl
 
 def arguments():
-        description = "Script to enumerate capabilities of the SAPControl Service"
+        description = "Script to enumerate capabilities of the SAP Start Service"
         usage = "%(prog)s [options]"
         parser = ArgumentParser(usage=usage, description=description)
         target = parser.add_argument_group("Target")
@@ -16,7 +19,7 @@ def arguments():
         target.add_argument("--user", dest="USER", help="Username for authentication")
         target.add_argument("--password", dest="PASSWORD", help="Password for authentication")
         target.add_argument("--instances", dest="INSTANCES",help="Print table of all detected SAP Instances of System", action="store_true")
-        target.add_argument("--methods", dest="METHODS",help="Output table of all unprotected SAPControl Methods per Instance", action="store_true")
+        target.add_argument("--methods", dest="METHODS",help="Output table of all unprotected SAP Start Service Methods per Instance", action="store_true")
         target.add_argument("--services", dest="SERVICES",help="Output table of running services and ports per Instance (Authenticated)", action="store_true")
         options = parser.parse_args()
         return options
