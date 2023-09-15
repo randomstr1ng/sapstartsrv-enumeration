@@ -11,6 +11,7 @@ State by a quote of SAP about the [SAP Start Service](https://help.sap.com/docs/
 > - Monitoring the runtime state
 > - Reading logs, traces, and configuration files
 > - Technical information, such as network ports, active sessions, thread lists, etc.
+> 
 > These functions are provided by the SOAP Web Service interface "SAPControl” and can be executed in SAP monitoring tools, such as SAP Management Console.
 
 
